@@ -1,6 +1,6 @@
 {
     "personas": [
-        { "id": 1, "nombre": "Javier", "email": "javier@eskura21.com" },
+        { "id": 1, "nombre": "Javier Lete", "email": "javier@eskura21.com" },
         { "id": 2, "nombre": "Pepe", "email": "pepe@sucasa.com" }
     ]
 }
