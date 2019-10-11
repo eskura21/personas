@@ -14,7 +14,7 @@
             <td>{{persona.nombre}}</td>
             <td>{{persona.email}}</td>
             <td>
-                <a class="btn btn-primary" routerLink="persona-detalle">Modificar</a>
+                <a class="btn btn-primary" routerLink="/persona-detalles/{{persona.id}}">Modificar</a>
                 &nbsp;
                 <a class="btn btn-danger" href="#">Borrar</a>
             </td>
@@ -22,4 +22,4 @@
     </tbody>
 </table>
 
-<button class="btn btn-primary">Añadir</button>
+<button routerLink="/persona-detalles" class="btn btn-primary">Añadir</button>
