@@ -7,10 +7,7 @@ import { Observable, of } from 'rxjs';
 })
 export class PersonaService {
 
-  personas: Persona[] = [
-    { id: 1, nombre: 'Javier', email: 'javier@eskura21.com' },
-    { id: 2, nombre: 'Pepe', email: 'pepe@sucasa.com' }
-  ];
+  personas: Persona[];
 
   constructor() { }
 
