@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MensajeService } from '../mensaje.service';
 
 @Component({
   selector: 'app-mensajes',
@@ -7,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensajesComponent implements OnInit {
 
-  nivel = 'success';
-  mensaje = 'MENSAJE DE DEMO EN COMPONENTE';
-
-  constructor() { }
+  constructor(private mensajeService: MensajeService) { }
 
   ngOnInit() {
   }
