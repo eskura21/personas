@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MensajesComponent implements OnInit {
 
+  nivel = 'success';
+  mensaje = 'MENSAJE DE DEMO EN COMPONENTE';
+
   constructor() { }
 
   ngOnInit() {
