@@ -7,12 +7,14 @@ import { PersonasTablaComponent } from './personas-tabla/personas-tabla.componen
 
 import { HttpClientModule } from '@angular/common/http';
 import { MensajesComponent } from './mensajes/mensajes.component';
+import { PersonaDetallesComponent } from './persona-detalles/persona-detalles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasTablaComponent,
-    MensajesComponent
+    MensajesComponent,
+    PersonaDetallesComponent
   ],
   imports: [
     BrowserModule,
