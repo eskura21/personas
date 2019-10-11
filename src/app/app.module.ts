@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PersonasTablaComponent } from './personas-tabla/personas-tabla.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MensajesComponent } from './mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonasTablaComponent
+    PersonasTablaComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,
