@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona';
+import { PersonaService } from '../persona.service';
 
 @Component({
   selector: 'app-personas-tabla',
@@ -10,9 +11,12 @@ export class PersonasTablaComponent implements OnInit {
 
   personas: Persona[] = [];
 
-  constructor() { }
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit() {
+    this.personaService.getPersonas().subscribe(
+      personas => this.personas = personas
+    );
   }
 
 }
