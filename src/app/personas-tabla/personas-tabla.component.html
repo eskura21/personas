@@ -8,15 +8,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>Javier</td>
-            <td>javier@eskura21.com</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Pepe</td>
-            <td>pepe@sucasa.com</td>
+        <tr *ngFor="let persona of personas">
+            <td>{{persona.id}}</td>
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.email}}</td>
         </tr>
     </tbody>
 </table>
