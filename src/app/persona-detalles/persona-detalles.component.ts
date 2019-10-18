@@ -3,6 +3,8 @@ import { Persona } from '../persona';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { PersonaService } from '../persona.service';
+import { MensajeService } from '../mensaje.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-persona-detalles',
@@ -18,7 +20,9 @@ export class PersonaDetallesComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private personaService: PersonaService) { }
+    private personaService: PersonaService,
+    private mensajeService: MensajeService,
+    private location: Location) { }
 
   ngOnInit(): void {
     const id: number = +this.route.snapshot.paramMap.get('id');
@@ -36,6 +40,12 @@ export class PersonaDetallesComponent implements OnInit {
 
     if (this.persona.id === 0) {
       console.log('Insertar');
+      this.personaService.insert(this.persona).subscribe(
+        personaRecibida => {
+          this.mensajeService.setMensaje('Persona insertada con el id ' + personaRecibida.id, 'success');
+          this.location.back();
+        }
+      );
     } else {
       console.log('Modificación');
     }

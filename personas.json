@@ -1,6 +1,24 @@
 {
-    "personas": [
-        { "id": 1, "nombre": "Javier Lete", "email": "javier@eskura21.com" },
-        { "id": 2, "nombre": "Pepe", "email": "pepe@sucasa.com" }
-    ]
+  "personas": [
+    {
+      "id": 1,
+      "nombre": "Javier Lete",
+      "email": "javier@eskura21.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Pepe",
+      "email": "pepe@sucasa.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan",
+      "email": "juanes@juanes.com"
+    },
+    {
+      "id": 4,
+      "nombre": "",
+      "email": ""
+    }
+  ]
 }
