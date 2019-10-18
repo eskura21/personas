@@ -12,4 +12,8 @@ export class PersonaDetallesComponent {
     nombre: 'Prueba',
     email: 'suemail@email.com'
   };
+
+  onAceptar() {
+    console.log(this.persona);
+  }
 }
