@@ -1,5 +1,5 @@
 <form>
-    <div class="form-group row">
+    <div *ngIf="persona.id !== 0" class="form-group row">
         <label for="id" class="col-sm-2 col-form-label">Id</label>
         <div class="col-sm-10">
             <input [(ngModel)]="persona.id" name="id" type="number" class="form-control" id="id" placeholder="Id" readonly>
