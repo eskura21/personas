@@ -45,6 +45,17 @@ export class PersonaService {
     );
   }
 
+  update(persona: Persona): Observable<Persona> {
+    return this.http.put<Persona>(this.url + persona.id, persona).pipe(
+      catchError(
+        this.gestionarError<Persona>(
+          `update(${JSON.stringify(persona)}))`,
+          { id: 0, nombre: '', email: '' }
+        )
+      )
+    );
+  }
+
   delete(id: number) {
     return this.http.delete<number>(this.url + id).pipe(
       catchError(

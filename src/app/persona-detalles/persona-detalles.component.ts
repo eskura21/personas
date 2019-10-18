@@ -48,6 +48,12 @@ export class PersonaDetallesComponent implements OnInit {
       );
     } else {
       console.log('Modificación');
+      this.personaService.update(this.persona).subscribe(
+        personaRecibida => {
+          this.mensajeService.setMensaje('Persona modificada con el id ' + personaRecibida.id, 'success');
+          this.location.back();
+        }
+      );
     }
   }
 }
