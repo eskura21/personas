@@ -16,7 +16,7 @@
             <td>
                 <a class="btn btn-primary" routerLink="/persona-detalles/{{persona.id}}">Modificar</a>
                 &nbsp;
-                <a class="btn btn-danger" href="#">Borrar</a>
+                <a class="btn btn-danger" (click)="onBorrar(persona.id)">Borrar</a>
             </td>
         </tr>
     </tbody>

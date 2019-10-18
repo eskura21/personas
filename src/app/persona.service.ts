@@ -34,6 +34,14 @@ export class PersonaService {
     );
   }
 
+  delete(id: number) {
+    return this.http.delete<number>(this.url + id).pipe(
+      catchError(
+        this.gestionarError<number>(`delete(${id})`, id)
+      )
+    );
+  }
+
   private gestionarError<T>(categoria: string, objetoADevolver: T):
     (err: any, caught: Observable<T>) => Observable<T> {
     return (error) => {
